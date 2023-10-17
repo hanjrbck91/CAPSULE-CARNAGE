@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     #region private Fields
 
+    //For Healthbar ui display and sync with the damage
+    [SerializeField] Image healthbarImage;
+    // In order the delete the other player Canvas from our scene (otherwise it gonna mess up everythin)
+    [SerializeField] GameObject ui;
+
     [SerializeField] GameObject cameraHolder;
 
     [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
@@ -65,6 +70,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
             Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(rb);
+            Destroy(ui);
         }
     }
 
@@ -217,6 +223,9 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         Debug.Log("took damage" + damage);
 
         currentHealth -= damage;
+
+        // We are taking the percentage of the Health 
+        healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if(currentHealth <=0)
         {
