@@ -2,6 +2,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,12 +32,26 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     PhotonView PV;
 
+    #region Health Fields
+
+    const float maxHealth = 100f;
+    float currentHealth = maxHealth;
+
+    #endregion
+
+    /// <summary>
+    /// Reference of the PlayerManager in order to show the death()
+    /// </summary>
+    PlayerManager playerManager;
+
     #endregion
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody>(); 
         PV = GetComponent<PhotonView>();
+
+        playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
     }
 
     private void Start()
@@ -166,6 +181,9 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     private void FixedUpdate()
     {
+        if (!PV.IsMine)
+            return;
+
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
     }
 
@@ -191,6 +209,19 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         }
 
         Debug.Log("took damage" + damage);
+
+        currentHealth -= damage;
+
+        if(currentHealth <=0)
+        {
+            Die();
+        }
+
+    }
+
+    void Die()
+    {
+        playerManager.Die();
     }
 
 }
