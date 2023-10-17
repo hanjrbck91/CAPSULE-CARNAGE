@@ -2,12 +2,13 @@ using Photon.Pun;
 using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 
-public class PlayerController : MonoBehaviourPunCallbacks
+public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 {
 
     #region private Fields
@@ -92,6 +93,11 @@ public class PlayerController : MonoBehaviourPunCallbacks
                 EquipItem(itemIndex - 1);
             }
         }
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            items[itemIndex].Use();
+        }
     }
 
     void Look()
@@ -161,6 +167,30 @@ public class PlayerController : MonoBehaviourPunCallbacks
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + transform.TransformDirection(moveAmount) * Time.fixedDeltaTime);
+    }
+
+    /// <summary>
+    /// Runs on the shooter's Computer
+    /// </summary>
+    /// <param name="damage"></param>
+    public void TakeDamage(float damage)
+    {
+        PV.RPC("RPC_TakeDamage", RpcTarget.All,damage);
+    }
+
+    /// <summary>
+    ///  Runs's on everybody's computer, but PV.IsMine check makes it only run on the victim's Computer
+    /// </summary>
+    /// <param name="damage"></param>
+    [PunRPC]
+    void RPC_TakeDamage(float damage)
+    {
+        if(!PV.IsMine)
+        {
+            return;
+        }
+
+        Debug.Log("took damage" + damage);
     }
 
 }
