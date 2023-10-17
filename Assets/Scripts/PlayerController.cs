@@ -113,6 +113,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         {
             items[itemIndex].Use();
         }
+
+        // You will Die if you fall out of the world
+        if(transform.position.y < -10f)
+        {
+            Die();
+        }
     }
 
     void Look()
