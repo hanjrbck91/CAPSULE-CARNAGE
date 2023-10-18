@@ -55,6 +55,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         MenuManager.Instance.OpenMenu("Title");
         Debug.Log("Joined Lobby");
+
+        // For creating Random name for user if the username typed any name 
         PhotonNetwork.NickName = "Player" + Random.Range(0, 1000).ToString("0000");
     }
 
