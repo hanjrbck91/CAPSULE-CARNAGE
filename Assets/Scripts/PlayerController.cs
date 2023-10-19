@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     #region private Fields
 
+    // Mouse cursor control
+    bool isCursorLocked = true;
+
     //For Healthbar ui display and sync with the damage
     [SerializeField] Image healthbarImage;
     // In order the delete the other player Canvas from our scene (otherwise it gonna mess up everythin)
@@ -61,6 +64,10 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     private void Start()
     {
+        // Mouse Lock 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         if (PV.IsMine)
         {
             EquipItem(0);
@@ -77,7 +84,14 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
     // Update is called once per frame
     void Update()
     {
-        if(!PV.IsMine) return;
+        // Mouse Lock and UnLock
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isCursorLocked = !isCursorLocked;
+            SetCursorState();
+        }
+
+        if (!PV.IsMine) return;
 
         Look();
         Move();
@@ -235,5 +249,22 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
     {
         playerManager.Die();
     }
+
+    #region Mouse Cursor Lock/Unlock
+    void SetCursorState()
+    {
+        if (isCursorLocked)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    #endregion
 
 }
