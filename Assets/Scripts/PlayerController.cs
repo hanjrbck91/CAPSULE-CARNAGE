@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     [SerializeField] GameObject cameraHolder;
 
-    [SerializeField] float mouseSensitivity, sprintSpeed, walkSpeed, jumpForce, smoothTime;
+    [SerializeField] float sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
     [SerializeField] Item[] items;
 
@@ -40,6 +40,8 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     PhotonView PV;
 
+    [Header("Mouse Smoothness")]
+    [SerializeField] float mouseSensitivity;
     [SerializeField] float smoothX = 0.0f;
     [SerializeField] float smoothY = 0.0f;
     [SerializeField] float horizontalSmoothTime = 0.1f;
