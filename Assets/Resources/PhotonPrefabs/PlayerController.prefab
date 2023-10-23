@@ -1080,14 +1080,18 @@ MonoBehaviour:
   healthbarImage: {fileID: 3501078473750989245}
   ui: {fileID: 2642866205291491390}
   cameraHolder: {fileID: 1764585295965715318}
-  mouseSensitivity: 3
-  sprintSpeed: 6
+  mouseSensitivity: 400
+  sprintSpeed: 10
   walkSpeed: 3
   jumpForce: 300
-  smoothTime: 0.15
+  smoothTime: 0.5
   items:
   - {fileID: 8249922902090005296}
   - {fileID: 1087399306104981053}
+  smoothX: 0
+  smoothY: 0
+  horizontalSmoothTime: 500
+  verticalSmoothTime: 1200
 --- !u!54 &6953375721892578990
 Rigidbody:
   m_ObjectHideFlags: 0
