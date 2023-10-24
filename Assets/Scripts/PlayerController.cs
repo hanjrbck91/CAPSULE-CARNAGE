@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 {
     #region Animation Fields
 
-    [SerializeField] Animator animator;
+    [SerializeField] Animator moveAnimator;
+    Animator shootAnimator;
 
     #endregion
 
@@ -144,6 +145,8 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         if(Input.GetMouseButtonDown(0))
         {
             items[itemIndex].Use();
+            shootAnimator.SetTrigger("Shoot");
+            
         }
 
         // You will Die if you fall out of the world
@@ -188,7 +191,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         float moveSpeed = moveAmount.magnitude;
 
         // Set the "isRunning" parameter in the animator based on moveSpeed
-        animator.SetFloat("isRunning", moveSpeed);
+        moveAnimator.SetFloat("isRunning", moveSpeed);
     }
 
     void Jump()
@@ -209,6 +212,8 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         itemIndex = _index;
 
         items[itemIndex].itemGameObject.SetActive(true);
+        shootAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
+        
 
         if(previousItemIndex != -1)
         {

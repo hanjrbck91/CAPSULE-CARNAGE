@@ -1122,7 +1122,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 360913685508607700, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: animator
+      propertyPath: gunAnimators.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 360913685508607700, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+      propertyPath: gunAnimators.Array.data[0]
+      value: 
+      objectReference: {fileID: 572469463}
+    - target: {fileID: 360913685508607700, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+      propertyPath: gunAnimators.Array.data[1]
       value: 
       objectReference: {fileID: 572469462}
     - target: {fileID: 4699449113562446892, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
@@ -1136,10 +1144,6 @@ PrefabInstance:
     - target: {fileID: 6011826383622507807, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: m_Name
       value: PlayerController
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708055477578820969, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8816075771261097113, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1192,7 +1196,12 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
 --- !u!95 &572469462 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 8386433238336279750, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2320948852556598176, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+  m_PrefabInstance: {fileID: 572469461}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &572469463 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 599479755135212391, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
   m_PrefabInstance: {fileID: 572469461}
   m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &610092142
