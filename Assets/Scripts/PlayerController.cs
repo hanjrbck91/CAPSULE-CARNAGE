@@ -11,6 +11,11 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 {
+    #region Animation Fields
+
+    [SerializeField] Animator animator;
+
+    #endregion
 
     #region private Fields
 
@@ -178,6 +183,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVeloctiy, smoothTime);
+
+        // Calculate the magnitude of moveAmount to determine movement speed
+        float moveSpeed = moveAmount.magnitude;
+
+        // Set the "isRunning" parameter in the animator based on moveSpeed
+        animator.SetFloat("isRunning", moveSpeed);
     }
 
     void Jump()
