@@ -148,6 +148,10 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             shootAnimator.SetTrigger("Shoot");
             
         }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            shootAnimator.SetTrigger("Reload");
+        }
 
         // You will Die if you fall out of the world
         if(transform.position.y < -10f)
