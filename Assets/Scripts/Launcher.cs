@@ -39,12 +39,25 @@ public class Launcher : MonoBehaviourPunCallbacks
     void Start()
     {
         Debug.Log("Connecting to Master");
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.ConnectUsingSettings();
+        }
+        else
+        {
+            // Remember you do not need to disconnect and connect again, you can join lobbies and create rooms
+            PhotonNetwork.Disconnect();
+        }
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
         PhotonNetwork.ConnectUsingSettings();
     }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("Connected to Master");
+        Debug.Log("Connected to Master/Servor");
         PhotonNetwork.JoinLobby();
 
         PhotonNetwork.AutomaticallySyncScene = true;    

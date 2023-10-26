@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     [SerializeField] float sprintSpeed, walkSpeed, jumpForce, smoothTime;
 
+    [Space]
     [SerializeField] Item[] items;
 
     int itemIndex;

@@ -248,6 +248,8 @@ namespace Photon.Pun
             }
         }
 
+        public static object NetworkObjects { get; set; }
+
         /// <summary>
         /// Called when "this client" left a room to clean up.
         /// </summary>
