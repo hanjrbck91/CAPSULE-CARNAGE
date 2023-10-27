@@ -1418,8 +1418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 612590874}
-  gameDurationInSeconds: 10
   timerText: {fileID: 764383420}
+  gameDurationInSeconds: 10
+  returntoMenuDurationInSeconds: 5
 --- !u!4 &760666936
 Transform:
   m_ObjectHideFlags: 0

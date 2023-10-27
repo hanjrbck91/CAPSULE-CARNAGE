@@ -147,22 +147,42 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         {
             items[itemIndex].Use();
             shootAnimator.SetTrigger("Shoot");
-            
+
+            // Call RPC to sync the trigger across the network
+            photonView.RPC("SyncShootTrigger", RpcTarget.Others);
+
         }
-        if(Input.GetKeyDown(KeyCode.R))
+
+        
+
+        if (Input.GetKeyDown(KeyCode.R))
         {
             shootAnimator.SetTrigger("Reload");
+
+            // Call RPC to sync the trigger across the network
+            photonView.RPC("SyncReloadTrigger", RpcTarget.Others);
         }
 
         // You will Die if you fall out of the world
-        if(transform.position.y < -10f)
+        if (transform.position.y < -10f)
         {
             Die();
         }
     }
 
-    
+    [PunRPC]
+    void SyncShootTrigger()
+    {
+        // Set the trigger on all other clients
+        shootAnimator.SetTrigger("Shoot");
+    }
 
+    [PunRPC]
+    void SyncReloadTrigger()
+    {
+        // Set the trigger on all other clients
+        shootAnimator.SetTrigger("Reload");
+    }
     void Look()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -197,6 +217,16 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
         // Set the "isRunning" parameter in the animator based on moveSpeed
         moveAnimator.SetFloat("isRunning", moveSpeed);
+
+        // Update the same parameter over the network
+        photonView.RPC("UpdateMovementParameter", RpcTarget.Others, moveSpeed);
+    }
+
+    [PunRPC]
+    void UpdateMovementParameter(float movement)
+    {
+        // Set the float parameter received from the network
+        moveAnimator.SetFloat("isRunning", movement);
     }
 
     void Jump()
@@ -287,6 +317,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         }
 
     }
+
 
     void Die()
     {
