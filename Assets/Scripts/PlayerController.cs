@@ -169,7 +169,9 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             Die();
         }
     }
-
+    /// <summary>
+    /// Animation syncing using PunRpc
+    /// </summary>
     [PunRPC]
     void SyncShootTrigger()
     {
