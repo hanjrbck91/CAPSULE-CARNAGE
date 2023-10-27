@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Rifle
   m_EditorClassIdentifier: 
   itemName: Rifle
-  damage: 50
+  damage: 25
+  magazineSize: 0

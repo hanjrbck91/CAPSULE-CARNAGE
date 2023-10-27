@@ -42,6 +42,15 @@ MonoBehaviour:
   - RPC_TakeDamage
   - RPC_Shoot
   - RPC_GetKill
+  - GameOver
+  - StartTimer
+  - StartReturnToMenuCountdown
+  - <Update>g__SyncReloadTrigger|29_1
+  - <Update>g__SyncShootTrigger|29_0
+  - UpdateMovementParameter
+  - SyncReloadTrigger
+  - SyncShootTrigger
+  - ShowLeaderBoard
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
