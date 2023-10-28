@@ -46,4 +46,19 @@ public class MenuManager : MonoBehaviour
         menu.Close();
     }
 
+    #region MenuGame Handler (like Quit , settings )
+
+    public void OnApplicationQuit()
+    {
+        Application.Quit();
+        print("Game is Quit");
+    }
+
+    public void OnSettingsButtonClicked()
+    {
+        print("Settings is opened");
+    }
+
+    #endregion
+
 }
