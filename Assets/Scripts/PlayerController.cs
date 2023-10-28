@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             }
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
         {
             items[itemIndex].Use();
             shootAnimator.SetTrigger("Shoot");
