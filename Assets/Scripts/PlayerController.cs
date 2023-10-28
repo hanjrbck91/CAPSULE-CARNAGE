@@ -11,6 +11,10 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 {
+    #region Shooting Cooltime variable
+    bool canShoot = true;
+    #endregion
+
     #region Animation Fields
 
     [SerializeField] Animator moveAnimator;
@@ -143,17 +147,23 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             }
         }
 
-        if(Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))
+        if (canShoot && (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
         {
+            Debug.Log("Shoot button pressed");
+
+            // Disable shooting temporarily
+            canShoot = false;
+            // To set a cool time between shooting 
+            StartCoroutine(ResetShootCooldown());
+
             items[itemIndex].Use();
             shootAnimator.SetTrigger("Shoot");
 
             // Call RPC to sync the trigger across the network
             photonView.RPC("SyncShootTrigger", RpcTarget.Others);
-
         }
 
-        
+
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -169,6 +179,18 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             Die();
         }
     }
+
+    /// <summary>
+    /// To set and shoot cool time in order to prevent multiple shooting at a time
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator ResetShootCooldown()
+    {
+        // Wait for a short duration before enabling shooting again
+        yield return new WaitForSeconds(0.1f); // Adjust this duration as needed
+        canShoot = true;
+    }
+
     /// <summary>
     /// Animation syncing using PunRpc
     /// </summary>
