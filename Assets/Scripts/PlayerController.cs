@@ -167,10 +167,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            shootAnimator.SetTrigger("Reload");
+           
+                shootAnimator.SetTrigger("Reload");
 
-            // Call RPC to sync the trigger across the network
-            photonView.RPC("SyncReloadTrigger", RpcTarget.Others);
+                // Call RPC to sync the trigger across the network
+                photonView.RPC("SyncReloadTrigger", RpcTarget.Others);
+            
         }
 
         // You will Die if you fall out of the world
