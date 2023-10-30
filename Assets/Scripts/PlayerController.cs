@@ -11,6 +11,9 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 {
+    // reference to get the method for reloading sound
+    private SingleShotGun activeGun; // Reference to the active SingleShotGun script
+
     #region Shooting Cooltime variable
     bool canShoot = true;
     #endregion
@@ -161,6 +164,8 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
             // Call RPC to sync the trigger across the network
             photonView.RPC("SyncShootTrigger", RpcTarget.Others);
+
+           
         }
 
 
@@ -170,8 +175,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
            
                 shootAnimator.SetTrigger("Reload");
 
-                // Call RPC to sync the trigger across the network
-                photonView.RPC("SyncReloadTrigger", RpcTarget.Others);
+            // Play reload sound of the active gun
+                activeGun?.ReloadSound();
+            
+
+            // Call RPC to sync the trigger across the network
+            photonView.RPC("SyncReloadTrigger", RpcTarget.Others);
             
         }
 
@@ -274,9 +283,15 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
         items[itemIndex].itemGameObject.SetActive(true);
         shootAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
-        
 
-        if(previousItemIndex != -1)
+        // Get the SingleShotGun script of the currently active gun
+        activeGun = items[itemIndex].GetComponent<SingleShotGun>();
+        // Debug statement to verify activeGun assignment
+        Debug.Log("Active gun: " + activeGun);
+
+
+
+        if (previousItemIndex != -1)
         {
             items[previousItemIndex].itemGameObject.SetActive(false);
         }
@@ -340,6 +355,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
         {
             Die();
             PlayerManager.Find(info.Sender).GetKill();
+           
         }
 
     }

@@ -6,6 +6,13 @@ using UnityEngine;
 
 public class SingleShotGun : Gun
 {
+    #region SoundClips 
+
+    [SerializeField] AudioSource shootSound;
+    [SerializeField] AudioSource reloadSound;
+
+    #endregion
+
     [SerializeField] Camera cam;
 
     PhotonView PV;
@@ -17,7 +24,21 @@ public class SingleShotGun : Gun
 
     public override void Use()
     {
-        Shoot();            
+        Shoot();
+
+        // Delay the sound play by 0.1 seconds (adjust the time as needed)
+        Invoke("PlayShootSoundWithDelay",.5f);
+    }
+
+    void PlayShootSoundWithDelay()
+    {
+        shootSound.Play();
+    }
+
+    public void ReloadSound()
+    {
+        reloadSound.Play();
+        Debug.Log("Reload sound played!");
     }
 
     void Shoot()
