@@ -1350,29 +1350,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1519754747980565644, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2371999111299015239, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4395560516852810946, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_Layer
-      value: 3
+    - target: {fileID: 3864251354016031111, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Name
+      value: Shoot
       objectReference: {fileID: 0}
-    - target: {fileID: 4395560516852810946, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 3864251354016031111, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
+      propertyPath: m_SynchronizeParameters.Array.data[1].Type
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4699449113562446892, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: sceneViewId
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5399689841363639640, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5761854839689827565, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: sceneViewId
@@ -1381,18 +1373,6 @@ PrefabInstance:
     - target: {fileID: 6011826383622507807, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: m_Name
       value: PlayerController
-      objectReference: {fileID: 0}
-    - target: {fileID: 6260091913864102935, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156215297456459358, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8156215297456459358, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8347376939368102861, guid: afb2892d5d1e94b43ba787d3ef272690, type: 3}
       propertyPath: sceneViewId

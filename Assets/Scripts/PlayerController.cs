@@ -132,10 +132,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             if (itemIndex >= items.Length - 1)
             {
                 EquipItem(0);
+                moveAnimator.SetBool("Scope", false);
             }
             else
             {
                 EquipItem(itemIndex + 1);
+                moveAnimator.SetBool("Scope", false);
             }
         }
         else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0f)
@@ -143,10 +145,12 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             if (itemIndex <= 0)
             {
                 EquipItem(items.Length - 1);
+                moveAnimator.SetBool("Scope", false);
             }
             else
             {
                 EquipItem(itemIndex - 1);
+                moveAnimator.SetBool("Scope", false);
             }
         }
 
