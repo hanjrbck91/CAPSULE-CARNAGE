@@ -61,4 +61,10 @@ public class MenuManager : MonoBehaviour
 
     #endregion
 
+    #region SubMenu Handler (Weapons,customization etc)
+
+
+
+    #endregion
+
 }
