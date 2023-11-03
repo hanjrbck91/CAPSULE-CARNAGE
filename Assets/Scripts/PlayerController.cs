@@ -56,10 +56,10 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
 
     [Header("Mouse Smoothness")]
     [SerializeField] float mouseSensitivity;
-    [SerializeField] float smoothX = 0.0f;
-    [SerializeField] float smoothY = 0.0f;
-    [SerializeField] float horizontalSmoothTime = 0.1f;
-    [SerializeField] float verticalSmoothTime = 0.1f;
+    //[SerializeField] float smoothX = 0.0f;
+    //[SerializeField] float smoothY = 0.0f;
+    //[SerializeField] float horizontalSmoothTime = 0.1f;
+    //[SerializeField] float verticalSmoothTime = 0.1f;
 
     #region Health Fields
 
@@ -224,25 +224,14 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
     }
     void Look()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        transform.Rotate(Vector3.up * Input.GetAxisRaw("Mouse X") * mouseSensitivity * Time.deltaTime);
 
-        // Smoothing mouse input separately for horizontal and vertical movements
-        mouseX = Mathf.SmoothDamp(mouseX, mouseX, ref smoothX, horizontalSmoothTime);
-        mouseY = Mathf.SmoothDamp(mouseY, mouseY, ref smoothY, verticalSmoothTime);
+        verticalLookRotation += Input.GetAxisRaw("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90f, 90f);
 
-
-        // Update total rotation
-        verticalLookRotation += mouseY;
-        verticalLookRotation = Mathf.Clamp(verticalLookRotation, -60f, 60f);
-
-        // Rotate the player object around its y-axis based on horizontal mouse movement
-        transform.Rotate(Vector3.up * mouseX);
-
-        // Smoothly rotate the camera holder based on vertical mouse movement
-        Quaternion targetRotation = Quaternion.Euler(Vector3.left * verticalLookRotation);
-        cameraHolder.transform.localRotation = Quaternion.Slerp(cameraHolder.transform.localRotation, targetRotation, smoothTime * Time.deltaTime);
+        cameraHolder.transform.localEulerAngles = Vector3.left * verticalLookRotation;
     }
+
 
 
     void Move()

@@ -1535,11 +1535,7 @@ MonoBehaviour:
   - {fileID: 8249922902090005296}
   - {fileID: 1087399306104981053}
   - {fileID: 4456392110626750843}
-  mouseSensitivity: 400
-  smoothX: 0
-  smoothY: 0
-  horizontalSmoothTime: 500
-  verticalSmoothTime: 1200
+  mouseSensitivity: 30
 --- !u!54 &6953375721892578990
 Rigidbody:
   m_ObjectHideFlags: 0

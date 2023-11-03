@@ -6,15 +6,15 @@ public class TimerManager : MonoBehaviourPunCallbacks
 {
     [SerializeField] CanvasGroup canvasGroupLeaderBoard;
     [SerializeField] CanvasGroup canvasGroupGameOver;
-
-    public float gameDurationInSeconds = 300f; // 5 minutes in this example
+    public float gameDurationInSeconds = 180f; // 3 minutes in this example
     private float timer;
-
+    private bool IsGameOverTriggered = false;
+    private bool IsLeaderboardTriggered = false;
     [SerializeField] private Text timerText;
 
     private void Start()
     {
-        timer = gameDurationInSeconds + 5;
+        timer = gameDurationInSeconds;
         if (PhotonNetwork.IsMasterClient)
         {
             // Start the timer only on the master client
@@ -35,35 +35,30 @@ public class TimerManager : MonoBehaviourPunCallbacks
         {
             timer -= 1f;
             UpdateTimerUI();
-
-            if (timer <= 5f)
-            {
-                // Game over logic
-                // Call an RPC to handle game over actions across the network
-                photonView.RPC("GameOver", RpcTarget.AllBuffered);
-            }
-
-            if (timer <= 0f)
-            {
-                // Game over logic
-                // Call an RPC to handle game over actions across the network
-                photonView.RPC("ShowLeaderBoard", RpcTarget.AllBuffered);
-            }
         }
+        else if (timer <= 0f && !IsGameOverTriggered)
+        {
+            // Game over logic
+            photonView.RPC("GameOver", RpcTarget.AllBuffered);
+            IsGameOverTriggered = true;
+
+            // Wait for 5 seconds before showing the leaderboard
+            Invoke("ShowLeaderboardAfterDelay", 5f);
+        }
+    }
+
+    private void ShowLeaderboardAfterDelay()
+    {
+        // Show leaderboard logic
+        photonView.RPC("ShowLeaderBoard", RpcTarget.AllBuffered);
+        IsLeaderboardTriggered = true;
     }
 
     private void UpdateTimerUI()
     {
         int minutes = Mathf.FloorToInt(timer / 60f);
-        int seconds = Mathf.FloorToInt(timer % 60f)-5;
-        if(timer>= 5)
-        {
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        }
-        else
-        {
-            return;
-        }
+        int seconds = Mathf.FloorToInt(timer % 60f);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     [PunRPC]
@@ -86,4 +81,19 @@ public class TimerManager : MonoBehaviourPunCallbacks
         canvasGroupGameOver.alpha = 1;
         // Implement game over actions here
     }
+
+    #region UIDropdown TimeSelection
+
+    public void DropdownMenuToSetGameTime(int index)
+    {
+        switch (index)
+        {
+            case 0: gameDurationInSeconds = 180; break;
+            case 1: gameDurationInSeconds = 300; break;
+            case 2: gameDurationInSeconds = 420; break;
+            default: gameDurationInSeconds = 180; break;
+        }
+    }
+
+    #endregion
 }
