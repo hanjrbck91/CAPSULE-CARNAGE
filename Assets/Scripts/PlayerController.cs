@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
             SetCursorState();
         }
 
-        if (!PV.IsMine) return;
+        if (!PV.IsMine || !PhotonNetwork.InRoom) return;
 
         Look();
         Move();

@@ -8,6 +8,8 @@ using System.Linq;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    private static Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
+
     #region Launcher Singleton
 
     public static Launcher Instance;
@@ -139,17 +141,27 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
-        foreach(Transform trans in roomListContent)
+        foreach (Transform trans in roomListContent)
         {
             Destroy(trans.gameObject);
         }
 
-        for(int i=0; i< roomList.Count; i++)
+        for (int i = 0; i < roomList.Count; i++)
         {
-            if (roomList[i].RemovedFromList)
-                continue;
+            RoomInfo info = roomList[i];
+            if (info.RemovedFromList)
+            {
+                cachedRoomList.Remove(info.Name);
+            }
+            else
+            {
+                cachedRoomList[info.Name] = info;
+            }
+        }
 
-            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(roomList[i]);
+        foreach (KeyValuePair<string, RoomInfo> entry in cachedRoomList)
+        {
+            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().SetUp(cachedRoomList[entry.Key]);
         }
     }
 

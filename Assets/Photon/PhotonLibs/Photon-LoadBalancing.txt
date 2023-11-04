@@ -1,0 +1,391 @@
+5716: 13:06:33.936 - Service: "Photon Socket Server" starting
+5716: 13:06:33.936 - Config File: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonServer.config
+5716: 13:06:33.952 - Config|INFO| Adding config path macro: "[CONFIG]" - "C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64"
+5716: 13:06:33.952 - Config|INFO| Adding config path macro: "[DEPLOY]" - "[CONFIG]\.."
+5716: 13:06:33.952 - Config|INFO| Adding config path macro: "[EXE]" - "C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64"
+5716: 13:06:33.952 - Config|INFO| Adding config path macro: "[CERTS]" - "[EXE]\certs"
+5716: 13:06:33.958 - Will produce at most: 10 crash dumps
+5716: 13:06:33.958 - Construction of service object complete
+5716: 13:06:33.958 - Server Starting...
+5716: 13:06:33.958 -    Tick count: 157117078 (wraps in: 47.8918 days)
+5716: 13:06:33.958 - Tick count 64: 157117078
+5716: 13:06:33.958 - ENet high resolution Tick count: 157117109 (wraps in: 47.8918 days)
+5716: 13:06:33.958 - Photon Version: 5.0.12.7770
+5716: 13:06:33.958 - Photon Build: RELEASE - x64 - VS2019 (16.8) - 192829336
+5716: 13:06:33.958 - PID: 5472
+5716: 13:06:33.958 - EXE: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonSocketServer.exe
+5716: 13:06:33.958 - OpenSSL 1.1.1i  8 Dec 2020
+5716: 13:06:33.958 - Config File: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonServer.config
+5716: 13:06:33.958 - Will NOT log unimportant exceptions
+5716: 13:06:33.958 - Performance Counter Configuration for: "Photon Socket Server"
+5716: 13:06:33.958 - CPerformanceCounterInstaller::DumpCounterConfiguration() - Counters are not installed
+5716: 13:06:33.958 - Counters are installed? - "Photon Socket Server"
+5716: 13:06:33.958 - Not using perfmon performance counters as they are not currently installed. Run the service with /InstallCounters to install them.
+5716: 13:06:33.958 - Using in-proc performance counters, access via Interop API only
+5716: 13:06:33.974 - Shutdown timeout enabled: 60000ms
+5716: 13:06:33.974 - Starting I/O thread pool with 4 threads
+4616: 13:06:33.974 - InitialiseWorkerThread - I/O thread - COM enabled
+5716: 13:06:33.974 - ENet: buffer size: 4096
+5716: 13:06:33.974 - ENet: buffer pool: 5000
+5716: 13:06:33.974 - Max message size: 512000
+5716: 13:06:33.974 - CMultiPoolBufferAllocator::GetAllocator() - "CENetThreadPool"
+7132: 13:06:33.974 - InitialiseWorkerThread - I/O thread - COM enabled
+8000: 13:06:33.974 - InitialiseWorkerThread - I/O thread - COM enabled
+5716: 13:06:33.974 - Starting ENet thread pool with the following settings
+5716: 13:06:33.974 - InitialThreads: 8 threads
+5716: 13:06:33.974 - MinThreads: 8 threads
+5716: 13:06:33.974 - Thread pool is fixed size
+5716: 13:06:33.974 - OnlyDispatchTimers: False
+7456: 13:06:33.974 - InitialiseWorkerThread - I/O thread - COM enabled
+700: 13:06:33.974 - Initialise - ENet thread pool thread
+5556: 13:06:33.974 - Initialise - ENet thread pool thread
+2732: 13:06:33.974 - Initialise - ENet thread pool thread
+1800: 13:06:33.974 - Initialise - ENet thread pool thread
+3944: 13:06:33.974 - Initialise - ENet thread pool thread
+7888: 13:06:33.974 - Initialise - ENet thread pool thread
+1236: 13:06:33.974 - Initialise - ENet thread pool thread
+8188: 13:06:33.974 - Initialise - ENet thread pool thread
+5716: 13:06:35.174 - Resolution ~ 217091 - 21ms
+5716: 13:06:35.174 - ENet timer granularity: 15ms
+5716: 13:06:35.174 - ENet high performance timers: False
+5716: 13:06:35.174 - Config|INFO| TCP S2S: no explicit configuration, using defaults. Add a <S2S> node to configure.
+5716: 13:06:35.174 - Config|INFO| TCP S2S:  - flow control: Max queued bytes: 50000
+5716: 13:06:35.174 - Config|INFO| TCP S2S:  - flow control: Notification step size: 25
+5716: 13:06:35.174 - Config|INFO| TCP S2S:  - no read timeout
+5716: 13:06:35.174 - Config|INFO| TCP S2S:  - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:35.174 - Config|INFO| TCP S2S: Nagle: disabled
+5716: 13:06:35.174 - Config|INFO| TCP S2S: PingFrequency: 2500
+5716: 13:06:35.174 - Config|INFO| TCP S2S: MaxInboundMessageSize: 512000
+5716: 13:06:35.174 - Config|INFO| TCP S2S: MaxOutboundMessageSize: 512000
+5716: 13:06:35.174 - Config|INFO| TCP S2S: ConnectTimeout: 30000ms
+5716: 13:06:35.174 - Config|INFO| TCP S2S: No App Data inactivity timeout
+5716: 13:06:35.174 - Config|INFO| TCP S2S: No write completion timeout
+5716: 13:06:35.174 - GetRuntime - About to load CLR - versions available:
+5716: 13:06:35.174 - v4.0.30319
+5716: 13:06:35.174 - Configuration requests: "v4.0.30319"
+5716: 13:06:35.174 - About to load version: "v4.0.30319"
+5716: 13:06:35.174 - About to load runtime: PhotonHostRuntime.PhotonDomainManager from PhotonHostRuntime, Culture=neutral, PublicKeyToken=02C301B61B060C4D
+5716: 13:06:35.174 - CLRBaseDirectory set to "C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy"
+5716: 13:06:35.174 - Start: About to load CLR - versions available:
+5716: 13:06:35.174 - v4.0.30319
+5716: 13:06:35.174 - No preference in configuration file, will load latest.
+5716: 13:06:35.174 - About to load version: "v4.0.30319"
+5716: 13:06:35.174 - Using server GC
+5716: 13:06:35.174 - GC: Server garbage collector enabled
+5716: 13:06:35.174 - GC: Concurrent garbage collector enabled
+5716: 13:06:35.174 - GC: Trim on commit disabled
+5716: 13:06:35.174 - Using CLR config file: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\PhotonSocketServer.exe.config
+5716: 13:06:35.174 - Loaded version: "v4.0.30319"
+5716: 13:06:35.648 - Photon host runtime loaded
+5716: 13:06:37.026 - License is valid.
+5716: 13:06:37.026 - Licensed for 100 concurrent connections.
+5716: 13:06:37.026 - ENet: Ping interval: 1000 ms
+5716: 13:06:37.026 - ENet: Data sending delay: 5 ms
+5716: 13:06:37.026 - ENet: ACK sending delay: 5 ms
+5716: 13:06:37.026 - ENet: Max Reliable Data In Transit (awaiting ACKs) per peer : 51200 bytes
+5716: 13:06:37.026 - ENet: Per peer bandwidth limit
+5716: 13:06:37.026 - ENet: Transmit Rate Limit: 256 KB/Sec
+5716: 13:06:37.026 - ENet: Limit period: 200ms
+5716: 13:06:37.026 - ENet: Limit per period: 52428 bytes
+5716: 13:06:37.026 - ENet: Max queued data for transmission per peer: 512000 bytes
+5716: 13:06:37.026 - ENet: Minimum retransmit timeout: 200
+5716: 13:06:37.026 - ENet: No Maximum retransmit timeout
+5716: 13:06:37.026 - ENet: Minimum timeout: 5000ms
+5716: 13:06:37.026 - ENet: Maximum timeout: 30000ms
+5716: 13:06:37.026 - ENet: Max Inbound Reliable Data Queued (awaiting resends of earlier sequence numbers) per peer : 163840 bytes
+5716: 13:06:37.026 - ENet: Will validate inbound ENet datagram CRC if present
+5716: 13:06:37.026 - ENet: No RTT ACK adjustment timeout
+5716: 13:06:37.026 - ENet: Packet throttle enabled: True
+5716: 13:06:37.026 - ENet: Default packet throttle: 32
+5716: 13:06:37.026 - ENet: Packet throttle scale: 32
+5716: 13:06:37.026 - ENet: Packet throttle counter: 7
+5716: 13:06:37.026 - ENet: Round Trip throttle multiplier: 2
+5716: 13:06:37.026 - ENet: Unreliable Queue timeout: 5ms
+5716: 13:06:37.026 - ENet: AO: Initial queue size: 4096
+5716: 13:06:37.026 - ENet: AO: Max consecutive ops: 200
+5716: 13:06:37.026 - ENet: max pooled buffers in peer: 10
+5716: 13:06:37.026 - ENet: Packet trace ring buffer size: 10
+5716: 13:06:37.026 - ENet: No Application data inactivity timeout
+5716: 13:06:37.026 - CMultiPoolBufferAllocator::GetAllocator() - "CENetHost"
+5716: 13:06:37.026 - Config|INFO| New TCP: Max message size: 512000
+5716: 13:06:37.026 - About to load application: Master from Photon.LoadBalancing
+5716: 13:06:38.772 - Taking reference on default app domain
+5716: 13:06:39.088 - Application: "Master" started in app domain: 2
+5716: 13:06:39.088 - About to load application: Game from Photon.LoadBalancing
+5716: 13:06:40.251 - Taking reference on default app domain
+5716: 13:06:40.475 - Application: "Game" started in app domain: 3
+5716: 13:06:40.475 - About to load application: NameServer from Photon.NameServer
+5716: 13:06:41.640 - Taking reference on default app domain
+5716: 13:06:41.768 - Application: "NameServer" started in app domain: 4
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - adding listener
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - nagle disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - send "Fast Path" disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - Forcing all applications ids to: "Master"
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - MaxOutboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - no message rate limit - Set RateLimitMessagesSec to configure.
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4530 - Recording performance counters in instance: New TCP: 0.0.0.0:4530
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - adding listener
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - nagle disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - send "Fast Path" disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - Forcing all applications ids to: "Game"
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - MaxOutboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - no message rate limit - Set RateLimitMessagesSec to configure.
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4531 - Recording performance counters in instance: New TCP: 0.0.0.0:4531
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - adding listener
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - nagle disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - send "Fast Path" disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - Forcing all applications ids to: "NameServer"
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - MaxOutboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - no message rate limit - Set RateLimitMessagesSec to configure.
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4533 - Recording performance counters in instance: New TCP: 0.0.0.0:4533
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - adding listener
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - nagle disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - send "Fast Path" disabled
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - MaxOutboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - no message rate limit - Set RateLimitMessagesSec to configure.
+5716: 13:06:41.768 - Config|INFO| New TCP: 0.0.0.0:4520 - Recording performance counters in instance: New TCP: 0.0.0.0:4520
+5716: 13:06:41.768 - ENet: Host Settings: EncTypesAllowed: ALL
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "Master"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 5055 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:5055"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 5055 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:5055"
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "Master"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 27001 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:27001"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 27001 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:27001"
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "Game"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 5056 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:5056"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 5056 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:5056"
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "Game"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 27002 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:27002"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 27002 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:27002"
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "NameServer"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 5058 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:5058"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 5058 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:5058"
+5716: 13:06:41.768 - Config|INFO| NewUDP - Forcing all applications ids to: "NameServer"
+5716: 13:06:41.768 - Config|INFO| NewUDP - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - ENet: EncTypesAllowed: ALL
+5716: 13:06:41.768 - NewUDP: address specified as: "0.0.0.0" adding listener to each available IPv4 address
+5716: 13:06:41.768 - NewUDP: Adding listener on: 172.31.37.172: 27000 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:172.31.37.172:27000"
+5716: 13:06:41.768 - NewUDP: Adding listener on: 127.0.0.1: 27000 with a listen backlog of: 500
+5716: 13:06:41.768 - CMultiPoolBufferAllocator::GetAllocator() - "CUDPSocketServer:UDP:127.0.0.1:27000"
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - adding listener
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - nagle disabled
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - Recording performance counters in instance: *:9090::Master
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - permitted origins: "*"
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - disable nagle: True
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - adding cache suppression headers
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - Recording performance counters in instance: *:9090::Master
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - permitted origins: "*"
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - disable nagle: True
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - adding cache suppression headers
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - Recording performance counters in instance: *:9090::Master
+5716: 13:06:41.768 - Config|INFO| *:9090::Master - inactivity timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9090 (*:9090::Master) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.768 - Config|INFO| *:9090::Master: - permitted origins: "*"
+5716: 13:06:41.768 - Config|INFO| *:9090::Master: - peer type: WebSocket
+5716: 13:06:41.768 - Config|INFO| *:9090::Master: - adding cache suppression headers
+5716: 13:06:41.768 - Config|INFO| *:9090::Master: - inactivity timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| *:9090::Master: - Forcing all applications ids to: "Master"
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - adding listener
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - listen backlog: 150
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - flow control: Max queued bytes: 50000
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - flow control: Notification step size: 25
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - read timeout: 10000ms
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - nagle disabled
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - MaxInboundMessageSize: 512000
+5716: 13:06:41.768 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - Recording performance counters in instance: *:9091::Game
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - Recording performance counters in instance: *:9091::Game
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - Recording performance counters in instance: *:9091::Game
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9091 (*:9091::Game) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.779 - Config|INFO| *:9091::Game:/* - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9091::Game:/* - peer type: WebSocket
+5716: 13:06:41.779 - Config|INFO| *:9091::Game:/* - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9091::Game:/* - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| *:9091::Game:/* - Forcing all applications ids to: "Game"
+5716: 13:06:41.779 - Config|INFO| *:9091::Game - websocket ping: 2000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - adding listener
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - listen backlog: 150
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - flow control: Max queued bytes: 50000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - flow control: Notification step size: 25
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - read timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - nagle disabled
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - MaxInboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - Recording performance counters in instance: *:9093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - Recording performance counters in instance: *:9093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - Recording performance counters in instance: *:9093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:9093 (*:9093::NameServer) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer: - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer: - peer type: WebSocket
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer: - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer: - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| *:9093::NameServer: - Forcing all applications ids to: "NameServer"
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - adding listener
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - listen backlog: 150
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - flow control: Max queued bytes: 50000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - flow control: Notification step size: 25
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - read timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - nagle disabled
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - MaxInboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - uses SSL
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - Cipher list: DEFAULT
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - Server Certficate: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\certs\server.pem
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - Server Domain Name: ec2-18-191-247-68.us-east-2.compute.amazonaws.com
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - Recording performance counters in instance: *:19090::Master
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - Recording performance counters in instance: *:19090::Master
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - Recording performance counters in instance: *:19090::Master
+5716: 13:06:41.779 - Config|INFO| *:19090::Master - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19090 (*:19090::Master) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.779 - Config|INFO| *:19090::Master:/+ - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19090::Master:/+ - peer type: WebSocket
+5716: 13:06:41.779 - Config|INFO| *:19090::Master:/+ - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19090::Master:/+ - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| *:19090::Master:/+ - Forcing all applications ids to: "Master"
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - adding listener
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - listen backlog: 150
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - flow control: Max queued bytes: 50000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - flow control: Notification step size: 25
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - read timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - nagle disabled
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - MaxInboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - uses SSL
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - Cipher list: DEFAULT
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - Server Certficate: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\certs\server.pem
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - Server Domain Name: ec2-18-191-247-68.us-east-2.compute.amazonaws.com
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - Recording performance counters in instance: *:19091::Game
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - Recording performance counters in instance: *:19091::Game
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - Recording performance counters in instance: *:19091::Game
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19091 (*:19091::Game) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.779 - Config|INFO| *:19091::Game:/+ - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19091::Game:/+ - peer type: WebSocket
+5716: 13:06:41.779 - Config|INFO| *:19091::Game:/+ - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19091::Game:/+ - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| *:19091::Game:/+ - Forcing all applications ids to: "Game"
+5716: 13:06:41.779 - Config|INFO| *:19091::Game - websocket ping: 2000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - adding listener
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - listen backlog: 150
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - flow control: Max queued bytes: 50000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - flow control: Notification step size: 25
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - read timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - rate limit: 32000 bytes per 250ms (125KB/sec)
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - nagle disabled
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - MaxInboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - MaxOutboundMessageSize: 512000
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - uses SSL
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - Cipher list: DEFAULT
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - Server Certficate: C:\Users\Administrator\Downloads\photon-server-sdk_v5-0-12-24499-rc1\deploy\bin_Win64\certs\server.pem
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - Server Domain Name: ec2-18-191-247-68.us-east-2.compute.amazonaws.com
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - Recording performance counters in instance: *:19093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - Recording performance counters in instance: *:19093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - disable nagle: True
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - Recording performance counters in instance: *:19093::NameServer
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - Per route performance counters are disabled when there's only one route
+5716: 13:06:41.779 - Config|INFO| HTTP: 0.0.0.0:19093 (*:19093::NameServer) - HTTP Keep-Alive timeout set from inactivity timeout: 10 seconds
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer:/+ - permitted origins: "*"
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer:/+ - peer type: WebSocket
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer:/+ - adding cache suppression headers
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer:/+ - inactivity timeout: 10000ms
+5716: 13:06:41.779 - Config|INFO| *:19093::NameServer:/+ - Forcing all applications ids to: "NameServer"
+5716: 13:06:41.851 - Service is running...
+

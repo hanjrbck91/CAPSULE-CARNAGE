@@ -44,7 +44,8 @@ public class GameManager : MonoBehaviourPunCallbacks
             PhotonNetwork.Destroy(view);
         }
 
-        SceneManager.LoadScene(0);
+        PhotonNetwork.LoadLevel(0);
+      
     }
 
 
