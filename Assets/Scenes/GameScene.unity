@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1532,9 +1532,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1013826023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -209, y: -63}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -23.9, y: -67.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &766753741
@@ -3763,6 +3763,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1010392881}
+    - target: {fileID: 3235543050755530588, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a64047786ca26545a625a555eecb6aa, type: 2}
     - target: {fileID: 3361623577008314326, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3778,7 +3782,7 @@ PrefabInstance:
     - target: {fileID: 5052732505589279817, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3a64047786ca26545a625a555eecb6aa, type: 2}
+      objectReference: {fileID: 2100000, guid: 46dbee248c433bc4296029e0422d8d66, type: 2}
     - target: {fileID: 5230262827460167794, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3858,7 +3862,7 @@ PrefabInstance:
     - target: {fileID: 8446567652295656159, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ad0a7e45a950fcb4facd180f223f5326, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a64047786ca26545a625a555eecb6aa, type: 2}
     - target: {fileID: 8455941771529423096, guid: 307ea0511c9fbd64a95d3d5f9e1f79c5, type: 3}
       propertyPath: m_Mesh
       value: 
