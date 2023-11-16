@@ -67,5 +67,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629be42e278daaa498dade8d593690f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeDisplay: {fileID: 0}
-  timerPanel: {fileID: 0}
