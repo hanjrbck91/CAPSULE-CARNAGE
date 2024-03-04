@@ -357,6 +357,7 @@ public class PlayerController : MonoBehaviourPunCallbacks,IDamageable
     void Die()
     {
         playerManager.Die();
+        TimerManager.Instance.StartCountDown();
     }
 
     #region Mouse Cursor Lock/Unlock

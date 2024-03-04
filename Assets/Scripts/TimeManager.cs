@@ -1,9 +1,14 @@
 using Photon.Pun;
+using System;
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviourPunCallbacks
 {
+    public static TimerManager Instance;
+
     [SerializeField] CanvasGroup canvasGroupLeaderBoard;
     [SerializeField] CanvasGroup canvasGroupGameOver;
     public float gameDurationInSeconds = 180f; // 3 minutes in this example
@@ -14,6 +19,8 @@ public class TimerManager : MonoBehaviourPunCallbacks
 
     private void Start()
     {
+        Instance = this;
+
         timer = gameDurationInSeconds;
         if (PhotonNetwork.IsMasterClient)
         {
@@ -95,5 +102,32 @@ public class TimerManager : MonoBehaviourPunCallbacks
         }
     }
 
+    #endregion
+
+    #region CountDown For Respawning
+
+    public string[] Messages;
+    public float Interval = 1f;
+    public TextMeshProUGUI UIText = null;
+    public GameObject timerPanel;
+
+    public void StartCountDown()
+    {
+        timerPanel.SetActive(true);
+        StartCoroutine(CountDown());
+    }
+
+    public IEnumerator CountDown()
+    {
+        int messageDisplay = Messages.Length - 1;
+
+        while(messageDisplay >= 0)
+        {
+            UIText.text = Messages[messageDisplay];
+            yield return new WaitForSeconds(Interval);
+            messageDisplay -= 1;
+        }
+        timerPanel.SetActive(false);
+    }
     #endregion
 }
